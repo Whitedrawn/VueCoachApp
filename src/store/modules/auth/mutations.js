@@ -2,8 +2,11 @@ export default{
     setUser(state,payload){
         state.token=payload.token;
         state.userId=payload.userId;
-        state.tokeExpiration=payload.tokeExpiration
+        state.didAutoLogout=false;
 
+    },
+    setAutoLogout(state){
+        state.didAutoLogout=true
     }
     
 }
